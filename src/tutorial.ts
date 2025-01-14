@@ -667,40 +667,120 @@ function checkTheme(theme:Theme) {
 
 
 
-function printLength(str: string | null | undefined) {
-    if (str) {
-        console.log(str.length);
+// function printLength(str: string | null | undefined) {
+//     if (str) {
+//         console.log(str.length);
         
-    }
-    else{
-        console.log('Is not a string');
+//     }
+//     else{
+//         console.log('Is not a string');
         
-    }
-}
+//     }
+// }
 
 
-try {
-    throw new Error ('This is a new error')
-} catch (error) {
-    if (error instanceof  Error) {
-        console.log(`Caught an Error object : ${error.message}`);
-    } else{
-        console.log('unknown error....');
+// try {
+//     throw new Error ('This is a new error')
+// } catch (error) {
+//     if (error instanceof  Error) {
+//         console.log(`Caught an Error object : ${error.message}`);
+//     } else{
+//         console.log('unknown error....');
         
-    }
+//     }
+// }
+
+// function checkInput(input: Date | string): string {
+//     if (input instanceof Date) {
+//         return input.getFullYear().toString()
+//     }
+//     return input
+// }
+
+// const year = checkInput(new Date())
+// const random = checkInput('2020-05-05')
+
+
+// console.log(year);
+// console.log(random);
+
+
+// type Student = {
+//     name : string,
+//     study : ()=> void;
+// }
+// type User = {
+//     name : string,
+//     login : ()=> void;
+// }
+
+// type Person = Student | User
+
+
+// const randomPerson = () : Person =>{
+//     return Math.random() > 0.5 
+//     ? {name : 'Zion' , study: () => console.log('Studying')}
+//     : {name : 'Elisha' , login: () => console.log('Logging In')}
+// }
+
+// console.log(randomPerson());
+
+// Discriminated unions 
+
+// type IncrementAction = {
+//     type : 'increment',
+//     amount: number,
+//     timestamp: number,
+//     user: string,
+// }
+// type DecrementAction = {
+//     type : 'Decrement',
+//     amount: number,
+//     timestamp: number,
+//     user: string,
+// }
+
+// type Action = IncrementAction | DecrementAction 
+
+
+
+// function reducer(state:number, action:Action) {
+//     switch (action.type) {
+//         case "increment":
+//            return state + action.amount;
+//         case "Decrement":
+//             return state - action.amount
+//         default:
+//             const unexpectedAction: never = action
+//             throw new Error(`unexpected Error ${unexpectedAction}`);
+            
+//     }
+// }
+
+// let newState = reducer(30,{
+//     type : 'Decrement',
+//     amount: 20,
+//     timestamp: 123456,
+//     user: 'David',
+// })
+
+// console.log(newState);
+
+
+
+// let array1:string[] = ['Appple', 'Banana', 'Pawpaw']
+// let array2:number[] = [2, 4, 6, 9]
+// let array3:Boolean[] = [true, false, true]
+
+// let array1 : Array<string> = ['Appple', 'Banana', 'Pawpaw']
+
+function genericFunction<T>(arg: T): T {
+    return arg;
 }
-
-function checkInput(input: Date | string): string {
-    if (input instanceof Date) {
-        return input.getFullYear().toString()
-    }
-    return input
-}
-
-const year = checkInput(new Date())
-const random = checkInput('2020-05-05')
+const someStringValue = genericFunction('hello world')
+console.log(someStringValue);
 
 
-console.log(year);
-console.log(random);
+// interface GenericInterface<T>
+
 
