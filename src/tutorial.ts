@@ -9,9 +9,7 @@
 //     id : 666626
 // }
 
-
 // console.log(someObj);
-
 
 // const books = ['1984', 'Brave New world', 'Fahrenheit 451']
 
@@ -25,10 +23,9 @@
 //     }
 // }
 
-// console.log(foundbook?.length); 
+// console.log(foundbook?.length);
 
-
-// let tax : number | string = 10 
+// let tax : number | string = 10
 
 // let requestStatus : 'pending' | 8 | 'error' = 'pending'
 
@@ -38,12 +35,10 @@
 
 // function sayHi(name:string) {
 //     console.log(`Hello People ${name.toUpperCase()}`);
-    
+
 // }
 
 // sayHi('name')
-
-
 
 // function calculateDiscount(price:number) {
 //     const discount = true
@@ -52,23 +47,18 @@
 //         return 'Discount Applied'
 //     //     //  return price * 0.9
 //     }
-//     return price * 0.9 
-   
-// }
+//     return price * 0.9
 
+// }
 
 // const finalPrice = calculateDiscount(200)
 // console.log(finalPrice);
 
 // calculateDiscount(99)
 
-
-
-
-
 // function addThree(number:any) {
 //     let anotherNumber : number = 3
-//     return number + anotherNumber   
+//     return number + anotherNumber
 // }
 
 // const result = addThree(4)
@@ -76,22 +66,18 @@
 
 // console.log(result);
 
-
-
-
 // const array:[]string = []
 
 // const nameOfStudent:string[] = ['Favour','Peter','Matthew','David']
-
 
 // function checkIfNameIsIndulce(name:string) {
 //     const check = nameOfStudent.includes(name)
 //     if (check) {
 //         console.log(`${name} is in the array of names`);
-        
+
 //     } else{
 //         console.log(`${name} is not in array of names`);
-        
+
 //     }
 // }
 
@@ -105,41 +91,37 @@
 
 // console.log(priceAfterDiscount);
 
-
-
 // function sum(message: string,  ...numbers:number[]):string {
 //     const doubled = numbers.map((num)=> num )
 //     console.log(doubled);
 //     let total = numbers.reduce((a,b)=>{
 //         console.log(a, 'jj');
 //         // console.log(b);
-        
-//       return a + b;  
+
+//       return a + b;
 //     }, 0)
 //     return `${message} ${total}`
 // }
 
- 
 // let result1 = sum('The total is : ' ,  1, 2, 3, 4, 5,)
 // console.log(result1);
 
 // function processInput(message: string | number ) {
 //     if (typeof message === 'number') {
 //         console.log(message * 2);
-        
+
 //     }else if(typeof message === 'string'){
 //         console.log((message || '').toUpperCase());
-        
+
 //     } else{
 //         console.log('Please input Number or String');
-        
+
 //     }
 // }
 // processInput(575787)
 
-
 // function createEmployee({id}:{ id: number}):{
-//     id: number; 
+//     id: number;
 //     isActive: boolean;
 // } {
 //     return {id, isActive: id % 2 === 0};
@@ -148,16 +130,12 @@
 // const first = createEmployee({id:1})
 // const second = createEmployee({id:2})
 
-
 // console.log(first);
 // console.log(second);
 
-
-
-
 // function createStundent(student: { id: number; name: string}):void {
 //     console.log(`Welcome to the Course ${student.name.toUpperCase()}!!!`);
-    
+
 // }
 
 // const firstStudent = {
@@ -168,14 +146,13 @@
 
 // createStundent(firstStudent)
 
-
 // function processData(input: string | number, config:{reserve: boolean} = {reserve : false}) {
 //     if (typeof input === 'number') {
 //         console.log(input ** 2);
-        
+
 //     }else {
 //         console.log(config.reserve ? input.toUpperCase().split('').reverse().join(''): input.toUpperCase());
-        
+
 //     }
 // }
 
@@ -193,9 +170,7 @@
 //     theme = t;
 // }
 
-
 // setTheme('dark')
-
 
 // type Employee = {
 //     id:number,
@@ -209,26 +184,22 @@
 //     employees:Employee[]
 // }
 
-
 // type Staff = Employee | Manager
-
 
 // function printStaffDetails(message:Staff) {
 //     if ('employees' in message) {
-//         console.log(`${message.name} is an manager in the ${message.employees.length} employees.`); 
+//         console.log(`${message.name} is an manager in the ${message.employees.length} employees.`);
 //     }
 //     else{
-//         console.log(`${message.name} is an employees in the ${message.department} department.`); 
+//         console.log(`${message.name} is an employees in the ${message.department} department.`);
 //     }
 // }
 //     const favour : Employee = { id:1, name:'Favour', department: 'SLT' };
 //     const jame: Employee = { id:2, name:'Jame', department: 'Computer Science' };
-//     const bob :Manager = { id:3, name: 'bobo', employees:[favour, jame]} 
-
+//     const bob :Manager = { id:3, name: 'bobo', employees:[favour, jame]}
 
 //     printStaffDetails(favour)
 //     printStaffDetails(bob)
-
 
 // type Book = {
 //     id:number,
@@ -256,8 +227,6 @@
 //     discount: 0.56
 // }
 
-
-
 // interface Book {
 //     readonly isbn: number,
 //     title: string,
@@ -275,22 +244,21 @@
 //     genre: 'Self-help',
 //     printAuthor() {
 //         console.log(this.author);
-        
+
 //     },
 //     printTitle(message) {
 //         return `${this.title} ${message} `
 //     },
-//     // first 
+//     // first
 //     // printSomething: function(someValue) {
-//     //    return someValue 
+//     //    return someValue
 //     // },
-//     // second 
+//     // second
 //     printSomething: (someValue )=>{
 //         console.log(deepwork.author);
 //         return someValue
 //     }
 // }
-
 
 // // deepwork.printAuthor()
 // // const result1 = deepwork.printTitle('is an awesome book')
@@ -299,10 +267,6 @@
 
 // // console.log(deepwork.printSomething(999));
 
-
-
-
-
 // interface Computer {
 //     readonly id: number,
 //     brand: string,
@@ -310,7 +274,6 @@
 //     storage?: number
 //     upgradeRam(upgrade:number): number
 // }
-
 
 // const computerInfo: Computer = {
 //     id: 3,
@@ -325,18 +288,14 @@
 //     }
 // }
 
-// computerInfo.storage = 256 
+// computerInfo.storage = 256
 // console.log(computerInfo.upgradeRam(78));
 // console.log(computerInfo);
-
-
-
 
 // interface person {
 //     name : string,
 //     getDetails():string;
 // }
-
 
 // interface dogOwner {
 //     dogName : string,
@@ -345,7 +304,7 @@
 
 // interface person {
 //     age : number,
-    
+
 // }
 // const Person: person = {
 //     name:'John',
@@ -387,7 +346,7 @@
 //     },
 //     managePeople() {
 //         console.log('Managing People .....');
-        
+
 //     },
 // }
 
@@ -408,16 +367,15 @@
 //         return {
 //             managePeople() {
 //                 console.log("Managing People ....");
-//             },    
+//             },
 //             delegateTasks(){
 //               console.log('DeleGating Tasks ....');
-              
-//             }, 
+
+//             },
 //             name : 'John'
 //         }
 //     }
 // }
-
 
 // interface Person {
 //     name : string
@@ -432,15 +390,13 @@
 //     delegateTasks():void
 // }
 
-
 // const employee : Person | DogOwner | Manager = getEmployee()
 
 // console.log(employee.name);
 // // getEmployee()
 
-
 // function isManager(obj: Person | DogOwner | Manager): obj is Manager {
-//     return 'managePeople' in obj 
+//     return 'managePeople' in obj
 // }
 
 // // console.log(isManager(employee));
@@ -449,9 +405,8 @@
 //     employee.delegateTasks()
 // }
 
-
 // enum serverResponseStatus {
-//     Success = 200, 
+//     Success = 200,
 //     Error = 505
 // }
 
@@ -464,11 +419,10 @@
 // Object.values(serverResponseStatus).forEach((value) => {
 //     if (typeof value === 'number') {
 //         console.log(value);
-        
-//     }
-    
-// })
 
+//     }
+
+// })
 
 // interface ServerResponse {
 //     result : serverResponseStatus,
@@ -485,13 +439,11 @@
 // const response:ServerResponse = getSeverResponse()
 // console.log(response);
 
-
 // enum UserRole {
 //     Admin,
 //     Manager,
 //     Employee
 // }
-
 
 // type User = {
 //     id : number,
@@ -513,7 +465,6 @@
 
 // console.log(result);
 
-
 // let someValue: any = 'This is a String';
 
 // let strLength: number = (someValue as string).length
@@ -528,63 +479,56 @@
 // let birdObject = JSON.parse(birdString)
 // let dogObject = JSON.parse(dogString)
 
-
-// let bird = birdObject as Bird 
+// let bird = birdObject as Bird
 // let dog = dogObject as Bird
 
 // console.log(dog.name);
 
+let unknownValue: unknown;
+unknownValue = "This is me";
+unknownValue = [1, 2, 3, 4, 5, 6];
+unknownValue = 34.555;
 
-
-let unknownValue : unknown
-unknownValue = 'This is me'
-unknownValue = [1,2,3,4,5,6]
-unknownValue = 34.555
-
-
-if (typeof unknownValue === 'number') {
-  let dd = unknownValue.toFixed(2)
-  console.log(dd); 
+if (typeof unknownValue === "number") {
+  let dd = unknownValue.toFixed(2);
+  console.log(dd);
 }
 
 function runSomeCode() {
-    const random = Math.random()
-    if (random < 0.5) {
-            throw new Error ('there waas error...') 
-    }
-    else{
-        throw 'some Error'
-    }
+  const random = Math.random();
+  if (random < 0.5) {
+    throw new Error("there waas error...");
+  } else {
+    throw "some Error";
+  }
 }
 
 try {
-    runSomeCode()
+  runSomeCode();
 } catch (error) {
-    if (error instanceof Error) {
-        console.log(error.message);
-    }else {
-        console.log(error);
-    }
+  if (error instanceof Error) {
+    console.log(error.message);
+  } else {
+    console.log(error);
+  }
 }
 
+type Theme = "Light" | "Dark";
 
-type Theme = 'Light' | 'Dark'
-
-function checkTheme(theme:Theme) {
-    if (theme === 'Light') {
-        console.log('Light theme');
-        return
-    }
-    if (theme === 'Dark') {
-        console.log('Dark theme');
-        return;
-    }
-    theme
+function checkTheme(theme: Theme) {
+  if (theme === "Light") {
+    console.log("Light theme");
+    return;
+  }
+  if (theme === "Dark") {
+    console.log("Dark theme");
+    return;
+  }
+  theme;
 }
-
 
 // enum Color {
-//     Red, 
+//     Red,
 //     Blue,
 //     Green
 // }
@@ -597,9 +541,9 @@ function checkTheme(theme:Theme) {
 //             return 'Blue';
 //         case Color.Green:
 //             return 'Green';
-//         default: 
+//         default:
 //         let unexpectedColor: never = color;
-        
+
 //     }
 // }
 
@@ -607,13 +551,11 @@ function checkTheme(theme:Theme) {
 // console.log(getColorName(Color.Red));
 // console.log(getColorName(Color.Green));
 
-
 // import person, {sayHello, newStudent, type  Student} from "./actions"
- 
+
 // sayHello('Oluwabukola')
 // console.log(newStudent);
 // console.log(person);
-
 
 // const newStudent2:Student = {
 //     name: 'MaxWell',
@@ -629,7 +571,6 @@ function checkTheme(theme:Theme) {
 
 // value = random < 0.33 ? 'hello' : random < 0.66 ? 123.456 : true
 
-
 // function checkValue(value: valueType):void {
 //     if (typeof value === 'string') {
 //         console.log(value.toLowerCase());
@@ -640,15 +581,14 @@ function checkTheme(theme:Theme) {
 //         return
 //     }
 //     console.log(`boolean : ${value}`);
-    
+
 // }
 
 // checkValue(value)
 
 // type Dog = {type: 'Dog', name :string; bark: () => void }
 // type Cat = {type: 'Cat', name :string; meow: ()=> void }
-// type Animal = Dog | Cat 
-
+// type Animal = Dog | Cat
 
 // function makeSound(animal:Animal) {
 //     if (animal.type === 'Dog') {
@@ -665,19 +605,16 @@ function checkTheme(theme:Theme) {
 //     }
 // }
 
-
-
 // function printLength(str: string | null | undefined) {
 //     if (str) {
 //         console.log(str.length);
-        
+
 //     }
 //     else{
 //         console.log('Is not a string');
-        
+
 //     }
 // }
-
 
 // try {
 //     throw new Error ('This is a new error')
@@ -686,7 +623,7 @@ function checkTheme(theme:Theme) {
 //         console.log(`Caught an Error object : ${error.message}`);
 //     } else{
 //         console.log('unknown error....');
-        
+
 //     }
 // }
 
@@ -700,10 +637,8 @@ function checkTheme(theme:Theme) {
 // const year = checkInput(new Date())
 // const random = checkInput('2020-05-05')
 
-
 // console.log(year);
 // console.log(random);
-
 
 // type Student = {
 //     name : string,
@@ -716,16 +651,15 @@ function checkTheme(theme:Theme) {
 
 // type Person = Student | User
 
-
 // const randomPerson = () : Person =>{
-//     return Math.random() > 0.5 
+//     return Math.random() > 0.5
 //     ? {name : 'Zion' , study: () => console.log('Studying')}
 //     : {name : 'Elisha' , login: () => console.log('Logging In')}
 // }
 
 // console.log(randomPerson());
 
-// Discriminated unions 
+// Discriminated unions
 
 // type IncrementAction = {
 //     type : 'increment',
@@ -740,9 +674,7 @@ function checkTheme(theme:Theme) {
 //     user: string,
 // }
 
-// type Action = IncrementAction | DecrementAction 
-
-
+// type Action = IncrementAction | DecrementAction
 
 // function reducer(state:number, action:Action) {
 //     switch (action.type) {
@@ -753,7 +685,7 @@ function checkTheme(theme:Theme) {
 //         default:
 //             const unexpectedAction: never = action
 //             throw new Error(`unexpected Error ${unexpectedAction}`);
-            
+
 //     }
 // }
 
@@ -766,21 +698,117 @@ function checkTheme(theme:Theme) {
 
 // console.log(newState);
 
-
-
 // let array1:string[] = ['Appple', 'Banana', 'Pawpaw']
 // let array2:number[] = [2, 4, 6, 9]
 // let array3:Boolean[] = [true, false, true]
 
 // let array1 : Array<string> = ['Appple', 'Banana', 'Pawpaw']
 
-function genericFunction<T>(arg: T): T {
-    return arg;
+// function genericFunction(arg: string): string {
+//   return arg;
+// }
+// const someStringValue = genericFunction("hjshjshs");
+// console.log(someStringValue);
+
+// interface GenericInterface<T> {
+//   value: T;
+//   getValue: () => T;
+// }
+
+// const genericString: GenericInterface<string> = {
+//   value: "Hello World",
+//   getValue(){
+//     return this.value;
+//   }
+// };
+
+// async function someFunc(): Promise<string>{
+//     return 'jjhjdhjdf'
+    
+// }
+
+// someFunc()
+
+// function generateStringArray(length: number, value: string): string[] {
+//     let result : string[] = []
+//     result = Array(length).fill(value);
+//     return result
+// }
+// function createArray<T>(length: number, value: T): T[] {
+//     let result : T[] = []
+//     result = Array(length).fill(value);
+//     return result
+// }
+
+// console.log(generateStringArray(2, 'Favour'));
+// console.log(createArray<boolean>(2, true));
+
+
+// function pair<a, b, c>(p1: a, p2: b , p3: c): [a,b,c] {
+//     return[p1, p2, p3];
+// }
+
+// let result = pair<number, string, boolean>(6, 'ff', false)
+// console.log(result);
+
+
+// type Car = {
+//     brand: string,
+//     model: number 
+// }
+
+// const car : Car = {
+//     brand : 'Toyato',
+//     model : 2021
+// }
+// type Product = {
+//     name: string,
+//     Price: number 
+// }
+
+// const product : Product = {
+//     name : 'Wig',
+//     Price : 200
+// }
+// type Student = {
+//     name: string,
+//     age: number 
+// }
+
+// const student : Student = {
+//     name : 'Wig',
+//     age : 21
+// }
+
+// function process<T extends {name : string}>(input:T):void{
+//     console.log(input.name);
+// }
+
+// console.log(process(student));
+// console.log(process(product));
+
+
+const url = 'https://www.course-api.com/react-tours-project';
+
+
+async function fecthData(url:string) {
+    try {
+        const res = await fetch(url);
+        if (!res.ok) {
+            throw new Error (`HTTP error! status ${res.status}`);
+        }
+        
+        const data = await res.json()
+        return data
+    } catch (error) {
+       const errMsg = error instanceof Error? error.message : 'there is no error...'
+       console.log(errMsg);
+       return []
+        
+    }
 }
-const someStringValue = genericFunction('hello world')
-console.log(someStringValue);
 
 
-// interface GenericInterface<T>
+
 
 
