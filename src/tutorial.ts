@@ -786,29 +786,94 @@ function checkTheme(theme: Theme) {
 
 // console.log(process(student));
 // console.log(process(product));
+// import z from 'zod'
+
+// const tourSchema = z.object({
+//   id:z.string(),
+//   name: z.string(),
+//   info : z.string(),
+//   image: z.string(),
+//   price: z.string(),
+//   // some : z.number()
+// })
+
+// const url = 'https://www.course-api.com/react-tours-project';
 
 
-const url = 'https://www.course-api.com/react-tours-project';
-
-
-async function fecthData(url:string) {
-    try {
-        const res = await fetch(url);
-        if (!res.ok) {
-            throw new Error (`HTTP error! status ${res.status}`);
-        }
+// type DataFecth = z.infer<typeof tourSchema>
+// async function fecthData(url: string): Promise<DataFecth[]> {
+//     try {
+//         const res = await fetch(url);
+//         if (!res.ok) {
+//             throw new Error (`HTTP error! status ${res.status}`);
+//         }
         
-        const data = await res.json()
-        return data
-    } catch (error) {
-       const errMsg = error instanceof Error? error.message : 'there is no error...'
-       console.log(errMsg);
-       return []
+//         const rawData: DataFecth[] = await res.json()
+//         const result = tourSchema.array().safeParse(rawData)
+//         console.log(result);
         
-    }
+//         if (!result.success) {
+//           throw new Error (`Invaild data: ${result.error}`)
+//         }
+//         return result.data
+//     } catch (error) {
+//        const errMsg = error instanceof Error? error.message : 'there is no error...'
+//        console.log(errMsg);
+//        return []
+        
+//     }
+// }
+
+// const tour = await fecthData(url)
+
+// tour.map((tours)=>{
+//   console.log(tours);
+  
+// })
+
+// class Book {
+//   readonly title: string;
+//   author: string;
+//   private checkedOut : boolean = false
+//   constructor(title:string, author:string){
+//     this.title = title
+//     this.author = author
+//   }
+//   public checkOut () {
+//     this.checkedOut = this.toggleCheckedOutstatus()
+//   }
+//   public isCheckOut () {
+//     return this.checkedOut 
+//   }
+//   private toggleCheckedOutstatus(){
+//     return !this.checkedOut
+//   }
+// }
+
+// const deepwork = new Book('MindSet', 'Carol')
+// deepwork.checkOut()
+// deepwork.checkOut()
+// deepwork.checkOut()
+// // // deepwork.
+
+// console.log(deepwork.isCheckOut());
+
+
+interface Iperson {
+  name: string;
+  age: number;
+  greet:() => void;
+}
+
+class Person implements Iperson  {
+  constructor(public name:string , public age: number){}
+  greet(): void{
+    console.log(` Hello my name is ${this.name} and I'm ${this.age} years old`);
+  }
 }
 
 
+const hipper = new Person('Zion', 21)
 
-
+hipper.greet()
 
